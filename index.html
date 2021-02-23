@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Anjing</title>
+</head>
+<body>
+
+    <button id="click">Click me beb</button>
+    <div id="gms" style="visibility: hidden;">
+        <h1 style="margin:30px">Shab jalan yu</h1>
+        <div id="By" style="position:absolute; left:64px; top:150px; width:210px;
+            height:210px;">
+            
+            <input type="button" value=" YA " onClick="f1()" />
+            </div>
+            <div ID="Bn" style="position:absolute; left:166px; top:150px; width:210px; height:210px;">
+            <input id="BB" type="button" value=" TIDAK " onMouseOver="f()" />
+        </div>
+    </div>
+    <!-- <h1 style="margin: 30px">Shab jalan yu</h1>
+    <button class="mau" id="yaa" style="margin-left: 30px; padding: 15px;">Mau</button>
+    <button class="ngga" id="td" style="margin-left: 50px; padding:15px">Engga</button> -->
+
+    <script>
+        var flag=1
+        function f1()
+        {
+            Swal.fire({
+                title: 'yah lo gabisa nolak ya, yaudah yu jalan',
+                imageUrl: '6.jpeg',
+                                                                                      
+                showConfirmButton: true,
+                confirmButtonText: 'Ok'
+            })
+        }
+        function f()
+        {
+            console.log(`terpanggil ${flag}`)
+            if(flag==1)
+                {
+                    document.getElementById("Bn").style.paddingTop = "120px";
+                    document.getElementById('Bn').style.paddingLeft = "200px";
+                    console.log(document.getElementById('Bn').left)
+                    Bn.style.top = 400
+                    Bn.style.left = 300
+                    
+                    
+                    flag=2
+                }
+            else if(flag==2)
+                {
+                    document.getElementById("Bn").style.paddingTop = "200px";
+                    document.getElementById('Bn').style.paddingLeft = "20px";
+
+                    Bn.style.top=400
+                    Bn.style.left=50
+                    flag=3
+                }
+            else if(flag==3)
+                {
+                    document.getElementById("Bn").style.paddingTop = "20px";
+                    document.getElementById('Bn').style.paddingLeft = " 66px";
+
+                    Bn.style.top=370
+                    Bn.style.left=166
+                    flag=1
+                }
+        }
+
+        var name;
+        $('#click').on('click', function(){
+
+           Swal.fire({
+               title: 'HALO NYETTTT',
+               showConfirmButton: true,
+               confirmButtonText: 'Ok'
+           }).then((result) => {
+               if(result.isConfirmed){
+                   Swal.fire({
+                        title: 'kenalan yuk',
+                        showConfirmButton: true,
+                        confirmButtonText: 'Ok'
+                   }).then((result) => {
+                       if(result.isConfirmed){
+                            Swal.fire({
+                                title: 'Namanya siapa',
+                                input: 'text',
+                                inputAttributes: {
+                                    autocapitalize: 'off'
+                                },
+                                preConfirm: (c) => {
+                                    return name = c
+                                },
+                                showConfirmButton: true,
+                                confirmButtonText: 'Ok'
+                            }).then((result) => {
+                                if(result.isConfirmed){
+                                    Swal.fire({
+                                        title: `hai ${name}`,
+                                        text: 'Yang ini bukan orngnya?',
+                                        showConfirmButton: true,
+                                        imageUrl: '4.jpeg',
+                                        confirmButtonText: 'Iya',
+                                        showDenyButton: true,
+                                        denyButtonText: 'bukan' 
+                                    }).then((result) => {
+                                        if(result.isConfirmed){
+                                            Swal.fire({
+                                                title: `Hai ${name} gue redy`,
+                                               
+                                                showConfirmButton: true,
+                                                confirmButtonText: 'Ok'
+                                            }).then((result) => {
+                                                if(result.isConfirmed){
+                                                    Swal.fire({
+                                                        title: 'Jawab Jujur yaa!',
+                                                        icon: 'question',
+                                                        text: 'Gue asik ga?',
+                                                        showConfirmButton: true,
+                                                        confirmButtonText: 'YES',
+                                                        showDenyButton: true,
+                                                        denyButtonText: 'YES' 
+                                                    }).then((result) => {
+                                                        Swal.fire({
+                                                            title: 'ASIK KAN?!!!',
+                                                            icon: 'question',
+                                                            text: 'HHAHAHAHAHAH',
+                                                            showConfirmButton: true,
+                                                            confirmButtonText: 'YES',
+                                                            showDenyButton: true,
+                                                            denyButtonText: 'YES' 
+
+                                                        }).then((result) => {
+                                                            if(result.isConfirmed){
+                                                                Swal.fire({
+                                                                    title: 'Sibuk ga?',
+                                                                    icon: 'question',
+                                                                   
+                                                                    showConfirmButton: true,
+                                                                    confirmButtonText: 'NO',
+                                                                    showDenyButton: true,
+                                                                    denyButtonText: 'NO' 
+                                                                }).then((result) => {
+                                                                    Swal.fire({
+                                                                        title: 'Ini gue kasih game buat lo',
+                                                                        showConfirmButton: true,
+                                                                        confirmButtonText: 'Ok'
+                                                                    }).then((result) => {
+                                                                        if(result.isConfirmed){
+                                                                            Swal.fire({
+                                                                                title: 'Rulesnya harus lo tolak',
+                                                                                showConfirmButton: true,
+                                                                                confirmButtonText: 'Ok'
+                                                                            }).then((result) =>{
+                                                                                if(result.isConfirmed){
+                                                                                    Swal.fire({
+                                                                                        title: 'ok, gamenya gue mulai ya',
+                                                                                        imageUrl: '5.jpeg',
+                                                                                      
+                                                                                        showConfirmButton: true,
+                                                                                        confirmButtonText: 'Ok'
+                                                                                    }).then((result) => {
+                                                                                        if(result.isConfirmed){
+                                                                                           // document.getElementById('click').style.visibility = "hidden";
+                                                                                           document.getElementById('gms').style.visibility = "visible"
+                                                                                           // Create a text node
+                                                                                            //h.appendChild(t);
+                                                                                        }
+                                                                                        // if(result.isConfirmed){
+                                                                                        //     Swal.fire({
+                                                                                        //     title: `Karena ini hari spesialmu`,
+                                                                                        //     text: 'Aku mau ucapin sesuatu kekamu',
+                                                                                        //     showConfirmButton: true,
+                                                                                        //     confirmButtonText: 'Ok'
+                                                                                        // }).then((result) => {
+                                                                                        //     if(result.isConfirmed){
+                                                                                        //         Swal.fire({
+                                                                                        //             title: `APAAANICHHH`,
+                                                                                        //             text: 'Jadi........',
+                                                                                        //             showConfirmButton: true,
+                                                                                        //             confirmButtonText: 'Ok'
+                                                                                        //         }).then((result) => {
+                                                                                        //             if(result.isConfirmed){
+                                                                                        //                 Swal.fire({
+                                                                                        //                     title: `Kan aku dah kenal lama sm km`,
+                                                                                        //                     text: 'Anjay',
+                                                                                        //                     showConfirmButton: true,
+                                                                                        //                     confirmButtonText: 'Ok'
+                                                                                        //                 }).then((result) => {
+                                                                                        //                     if(result.isConfirmed){
+                                                                                        //                         Swal.fire({
+                                                                                        //                             title: `so disini`,
+                                                                                        //                             text: 'sabar sabar',
+                                                                                        //                             showConfirmButton: true,
+                                                                                        //                             confirmButtonText: 'Ok'
+                                                                                        //                         }).then((result) => {
+                                                                                        //                             if(result.isConfirmed){
+                                                                                        //                                 Swal.fire({
+                                                                                        //                                     title: `Kan ini hari spesialmu`,
+                                                                                        //                                     text: 'hylyh spesial',
+                                                                                        //                                     showConfirmButton: true,
+                                                                                        //                                     confirmButtonText: 'Ok'
+                                                                                        //                                 }).then((result) => {
+                                                                                        //                                     if(result.isConfirmed){
+                                                                                        //                                         Swal.fire({
+                                                                                        //                                             title: `jadi...`,
+                                                                                        //                                             text: 'ehem',
+                                                                                        //                                             showConfirmButton: true,
+                                                                                        //                                             confirmButtonText: 'Ok'
+                                                                                        //                                         }).then((result) => {
+                                                                                        //                                             if(result.isConfirmed){
+                                                                                        //                                                 Swal.fire({
+                                                                                        //                                                     title: `nungguin ya`,
+                                                                                        //                                                     text: 'HAHAHAHAHA',
+                                                                                        //                                                     showConfirmButton: true,
+                                                                                        //                                                     confirmButtonText: 'Ok'
+                                                                                        //                                                 }).then((result) => {
+                                                                                        //                                                     if(result.isConfirmed){
+                                                                                        //                                                         Swal.fire({
+                                                                                        //                                                             title: `cukup basa basinya`,
+                                                                                        //                                                             text: 'jadi',
+                                                                                        //                                                             showConfirmButton: true,
+                                                                                        //                                                             confirmButtonText: 'Ok'
+                                                                                        //                                                         }).then((result) => {
+                                                                                        //                                                             if(result.isConfirmed){
+                                                                                                                                                        
+                                                                                        //                                                                 Swal.fire({
+                                                                                        //                                                                     title: `HAPPY BIRTHDAY ${name}`,
+                                                                                        //                                                                     text: 'uwuw',
+                                                                                                                                                           
+                                                                                        //                                                                     background: `#fffff`,
+                                                                                        //                                                                     showConfirmButton: true,
+                                                                                        //                                                                     confirmButtonText: 'Ok',
+                                                                                        //                                                                     backdrop: `url(2.jpeg)
+                                                                                        //                                                                      contain
+                                                                                        //                                                                      rgba(0,0,123,0.4)
+                                                                                                                                                             
+                                                                                        //                                                                      `
+                                                                                        //                                                                 }).then((result) => {
+                                                                                        //                                                                     if(result.isConfirmed){
+                                                                                        //                                                                         Swal.fire({
+                                                                                        //                                                                             title: `wish u all the best`,
+                                                                                        //                                                                             text: 'xixi',
+                                                                                        //                                                                             showConfirmButton: true,
+                                                                                        //                                                                             confirmButtonText: 'Ok'
+                                                                                        //                                                                         }).then((result) => {
+                                                                                        //                                                                             if(result.isConfirmed){
+                                                                                        //                                                                                 Swal.fire({
+                                                                                        //                                                                                     title: `moga ${name} tetep besprenq`,
+                                                                                        //                                                                                     text: 'kok alay anjim',
+                                                                                        //                                                                                     showConfirmButton: true,
+                                                                                        //                                                                                     confirmButtonText: 'Ok'
+                                                                                        //                                                                                 }).then((result) => {
+                                                                                                                                                                            
+                                                                                        //                                                                                 })
+                                                                                        //                                                                             }
+                                                                                        //                                                                         })
+                                                                                        //                                                                     }
+                                                                                        //                                                                 })
+                                                                                        //                                                             }
+                                                                                        //                                                         })
+                                                                                        //                                                     }
+                                                                                        //                                                 })
+                                                                                        //                                             }
+                                                                                        //                                         })
+                                                                                        //                                     }
+                                                                                        //                                 })
+                                                                                        //                             }
+                                                                                        //                         })
+                                                                                        //                     }
+                                                                                        //                 })
+                                                                                        //             }
+                                                                                        //         })
+                                                                                        //     }
+                                                                                        // })
+                                                                                    //}
+                                                                                    })
+                                                                                }
+                                                                            })
+                                                                        }
+                                                                    })
+                                                                })
+                                                            }
+                                                        })
+                                                    })
+                                                }
+                                            })
+                                        } // else tidak kangen
+                                       
+                                    })
+                                }
+                            })
+                       }
+                   })
+               }
+           })
+
+
+        })
+
+
+
+
+        function delay(delayInms) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                resolve(2);
+        }, delayInms);
+  });
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>
