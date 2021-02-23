@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="style.css">
 
 
-    <title>Anjing</title>
+    <title>Halooo nyettt</title>
 </head>
 <body>
 
-    <button id="click">Click me beb</button>
+    <button id="click" style="width: 100px; height: 50px;">Click Me Please</button>
     <div id="gms" style="visibility: hidden;">
         <h1 style="margin:30px">Shab jalan yu</h1>
         <div id="By" style="position:absolute; left:64px; top:150px; width:210px;
@@ -31,6 +31,16 @@
     <button class="mau" id="yaa" style="margin-left: 30px; padding: 15px;">Mau</button>
     <button class="ngga" id="td" style="margin-left: 50px; padding:15px">Engga</button> -->
 
+    <div id="vid" style="visibility: hidden;">
+        <video style="display: block; margin: auto;" width="400" height="400" controls>
+            <source src="11.mp4" type="video/mp4">
+        </video>
+        <h1 style="text-align: center;">See u when i see u nyett</h1>
+
+    </div>
+
+
+
     <script>
         var flag=1
         function f1()
@@ -41,6 +51,12 @@
                                                                                       
                 showConfirmButton: true,
                 confirmButtonText: 'Ok'
+            }).then((result)=>{
+                if(result.isConfirmed){
+                    document.getElementById('vid').style.visibility = "visible"
+                    document.getElementById('gms').style.visibility = "hidden"
+        
+                }
             })
         }
         function f()
